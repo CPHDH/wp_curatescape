@@ -326,7 +326,7 @@ function curatescape_stories_for_tour($post){
 					$html .= get_the_post_thumbnail( $post, 'thumbnail');
 					$html .= '<div>';
 					$html .= '<h3><a href="'.get_the_permalink( $post ).'">'.get_the_title( $post ).curatescape_subtitle( $post ).'</a></h3>';
-					$html .= '<p>'.substr($excerpt, 0, 240).'...</p>';
+					$html .= '<p>'.htmlspecialchars( substr($excerpt, 0, 240) ).'...</p>';
 					$html .= '</div>';
 				$html .= '</div>';
 			}
